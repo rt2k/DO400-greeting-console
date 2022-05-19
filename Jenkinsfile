@@ -22,5 +22,23 @@ pipeline{
         }
 
         // Add the Release stage here
+stage('Rease') {
+
+ steps {
+
+ sh '''
+
+ oc project cqwpwn-greetings
+
+ oc start-build greeting-console --follow --wait
+
+ '''
+
+ }
+
+}
+
+
+
     }
 }
